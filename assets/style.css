@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*********** admin dashboard styling **********/
+.card {
+  background: linear-gradient(to right, #001c68, #00b8a9);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 8px 5px 5px #3b3131;
+}
+
+/************************** for sidebar ***********************************/
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .side-header {
+  margin-left: 30px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  background-color: #584e46;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  font-size: 34px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+}
+
+.openbtn:hover {
+  color: #ecdac9;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+
+/*form css*/
+.containers {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #fff;
+}
+.wrapper {
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+.title {
+  margin-left: 0px;
+  margin-right: 0px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+}
+.titlebillsPaid {
+  color: #fff; /* White text color */
+  font-size: 29px; /* Font size */
+  font-weight: 600; /* Font weight */
+  text-align: center; /* Center align text */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 5px; /* Add a slight border radius */
+  background-color: #5c2d91; /* Purple background color */
+  margin-left: 0; /* Remove left margin */
+  margin-right: 0; /* Remove right margin */
+  width: 100%; /* Set width to 100% */
+}
+
+.wrapper .title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+}
+.wrapper form {
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.wrapper form .field input {
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  border-radius: 25px;
+  font-size: 17px;
+  outline: none; /*remove border outline*/
+  border: 1px solid lightgrey;
+}
+.wrapper form .field input:focus,
+.wrapper form .field input:valid {
+  border-color: #4158d0;
+}
+.wrapper form .field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 17px;
+  color: #999;
+  transform: translateY(-50%);
+  pointer-events: none; /*this allows the input field to be clicked for inserting data*/
+  transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus ~ label,/*label will go up*/
+.wrapper form .field input:valid ~ label {
+  /*label color doesnot change until there is no value in input field*/
+  top: 0%;
+  color: #4158d0;
+  background-color: #fff;
+  font-size: 16px;
+  transform: translatey(-50%);
+}
+/*form submit button*/
+.wrapper form .field .submit.button {
+  height: 50px; /* Height equal to input field */
+  width: 107%; /* Width equal to input field */
+  padding: 10px 20px; /* Padding for button */
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.wrapper form .field .submit.button:active {
+  transform: scale(0.95);
+}
+
+.wrapper input[type="submit"] {
+  padding-left: none;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+  color: white;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.wrapper input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+.complainWrapper {
+  width: 80%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+.complainWrapper .title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+}
+
+.complainWrapper input[type="submit"] {
+  padding-left: none;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+  color: white;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.complainWrapper input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+.complainWrapper .AddComplainButton {
+  height: 50px; /* Height equal to input field */
+  width: 250px; /* Width equal to input field */
+
+  margin-bottom: 5px;
+  padding: 10px 20px; /* Padding for button */
+  border: none;
+
+  border-radius: 15px;
+  background: linear-gradient(to right, #001c68, #00b8a9);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.complainWrapper .AddComplainButton:active {
+  transform: scale(0.95);
+}
+.complainWrapper textarea {
+  height: 50px;
+  width: 50%;
+
+  padding-left: 20px;
+  border-radius: 25px;
+  font-size: 17px;
+  outline: none; /*remove border outline*/
+  border: 1px solid lightgrey;
+}
